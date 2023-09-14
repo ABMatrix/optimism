@@ -1,7 +1,7 @@
 {
   "finalSystemOwner": "0xc309507A5508c5E91d1A5e04614D723851BCb571",
   "portalGuardian": "0xc309507A5508c5E91d1A5e04614D723851BCb571",
-  "l1StartingBlockTag": "0x28d05afac791281e963868a824a3f4bd3ac0fb74abed038cc46f5f7b45cf6fe9",
+  "l1StartingBlockTag": "0x55d1cd751f9e4bb6f5051fa713cb4e22ab34774083999a37f08e777f70c63420",
   "l1ChainID": 5,
   "l2ChainID": 1825,
   "l2BlockTime": 2,
@@ -14,7 +14,7 @@
   "batchSenderAddress": "0xa255AE8258627f211883f575d0BBcC9AA67A74E8",
   "l2OutputOracleSubmissionInterval": 120,
   "l2OutputOracleStartingBlockNumber": 0,
-  "l2OutputOracleStartingTimestamp": 1694704992,
+  "l2OutputOracleStartingTimestamp": 1694708832,
   "l2OutputOracleProposer": "0x3e763b8089e605744B94F6E0c45433Be67F428BA",
   "l2OutputOracleChallenger": "0xc309507A5508c5E91d1A5e04614D723851BCb571",
   "finalizationPeriodSeconds": 12,
