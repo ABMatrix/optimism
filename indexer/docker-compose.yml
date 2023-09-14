@@ -31,6 +31,11 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
+    healthcheck:
+      test: [ "CMD-SHELL", "pgrep indexer" ]
+      interval: 10s
+      timeout: 5s
+      retries: 3
 
   api:
     build:
@@ -38,7 +43,7 @@ services:
       dockerfile: indexer/Dockerfile
     command: ["indexer", "api"]
     healthcheck:
-      test: wget localhost:8080/healthz -q -O - > /dev/null 2>&1
+      test: wget localhost:8006/healthz -q -O - > /dev/null 2>&1
     environment:
       # Note that you must index goerli with INDEXER_BEDROCK=false first, then
       # reindex with INDEXER_BEDROCK=true or seed the database
@@ -48,11 +53,11 @@ services:
     volumes:
       - ./indexer.toml:/indexer/indexer.toml
     ports:
-      - 8080:8080
+      - 8006:8006
     depends_on:
       postgres:
         condition: service_healthy
-        
+
   ui:
     build:
       context: ..
@@ -67,7 +72,7 @@ services:
       postgres:
         condition: service_healthy
 
-  prisma-check: 
+  prisma-check:
     restart: "no"
     build:
       context: ..

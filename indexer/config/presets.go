@@ -115,4 +115,19 @@ var Presets = map[int]Preset{
 			L1StartingHeight: 8942381,
 		},
 	},
+	1852: {
+		Name: "iPollo Goerli",
+		ChainConfig: ChainConfig{
+			L1Contracts: L1Contracts{
+				AddressManager:              common.HexToAddress("0x8B016f48ED0AA76C8A0984FAE83429E13A90Ba76"),
+				SystemConfigProxy:           common.HexToAddress("0x7d419ce86Ea1C697FBAA8cB0E2A381FB18853623"),
+				OptimismPortalProxy:         common.HexToAddress("0x395f28246294062C2cEa739208B207d4501083B7"),
+				L2OutputOracleProxy:         common.HexToAddress("0x3E0aC9E17333DD68C4a7c5EB643Db51979953257"),
+				L1CrossDomainMessengerProxy: common.HexToAddress("0xd9448dE6Cb1c52b368e092B6Ade54D39985D382a"),
+				L1StandardBridgeProxy:       common.HexToAddress("0x162900dEFC8cC83Ae94B815461BB5FA7d7598CB3"),
+				L1ERC721BridgeProxy:         common.HexToAddress("0x87dA6C952aA7e2552F5a33941fD08F7d3a8fF9fD"),
+			},
+			L1StartingHeight: 9651850,
+		},
+	},
 }
